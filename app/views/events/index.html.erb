@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <% @top_events.each do |event| %>
-        <%= link_to events_path(event) do %>
+        <%= link_to events_path do %>
         <div  class="col-sm-3">
           <p><%= event.name %></p>
           <p><%= event.description%></p>
@@ -14,7 +14,7 @@
 <div class="container">
   <div class="row">
     <% @events.each do |event| %>
-        <%= link_to events_path(event) do %>
+        <%= link_to events_path do %>
         <div  class="col-sm-4">
           <p><%= event.name %></p>
           <p><%= event.description%></p>
