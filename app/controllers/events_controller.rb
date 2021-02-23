@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :find_event, only: :show
 
   def index
+    @top_events =Event.all.first(3)
     @events =Event.all
   end
 

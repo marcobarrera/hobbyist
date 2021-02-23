@@ -1,2 +1,25 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <% @top_events.each do |event| %>
+        <%= link_to event_path(event) do %>
+        <div  class="col-sm-3">
+          <p><%= event.name %></p>
+          <p><%= event.description%></p>
+        </div>
+        <%end%>
+    <%end%>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @events.each do |event| %>
+        <%= link_to event_path(event) do %>
+        <div  class="col-sm-4">
+          <p><%= event.name %></p>
+          <p><%= event.description%></p>
+        </div>
+        <%end%>
+    <%end%>
+  </div>
+</div>
