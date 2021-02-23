@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: transparent;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +10,75 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+
+.navbar-lewagon .navbar-container {
+  color :blue
+}
+
+._1usxwsg6 {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: transparent !important;
+    border: 1px solid #DDDDDD !important;
+    color: #222222 !important;
+    cursor: pointer !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    margin: 0px !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 5px 5px 5px 12px !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    background-color: #FFFFFF !important;
+    border-radius: 21px !important;
+    height: 42px !important;
+    position: relative !important;
+    vertical-align: middle !important;
+    -webkit-transition: box-shadow 0.2s ease !important;
+    -moz-transition: box-shadow 0.2s ease !important;
+    transition: box-shadow 0.2s ease !important;
+    z-index: 1 !important;
+}
+
+.navbar {
+  position: relative;
+  /* default colors + transition */
+  background-color: transparent;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+/* scrolling state */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* scrolling colors */
+  background-color: black;
+  color: white;
+}
+
+.navbar.fixed-top a {
+  color: white;
+}
+
+
