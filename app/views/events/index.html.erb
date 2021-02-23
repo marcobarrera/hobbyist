@@ -7,6 +7,9 @@
           <p><%= event.description%></p>
         </div>
         <%end%>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
+        <%= event.name %>
+        </button>
     <%end%>
   </div>
 </div>
@@ -15,11 +18,41 @@
   <div class="row">
     <% @events.each do |event| %>
         <%= link_to events_path do %>
-        <div  class="col-sm-4">
+        <div  class="col-sm-4 event-card">
           <p><%= event.name %></p>
           <p><%= event.description%></p>
         </div>
         <%end%>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
+        <%= event.name %>
+        </button>
     <%end%>
   </div>
 </div>
+
+
+<% @events.each do |event| %>
+<!-- Modal -->
+<div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name %></h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!-- Content of the modal -->
+        <p><%= event.date%></p>
+        <p>Category: <%= event.category%></p>
+        <p>Description: <%= event.description%></p>
+        <p>Capacity: <%= event.capacity%></p>
+        <p>Adress: <%= event.address%></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <%end%>
