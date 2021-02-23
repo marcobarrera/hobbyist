@@ -11,6 +11,11 @@ categories = ["music", "sports", "poetry", "fitness"]
 names = ["swing dancing", "basketball game", "slam poetry", "zumba"]
 
 12.times do
-  event = Event.create(name: names.sample, address: Faker::Address.city, description: Faker::Lorem.sentence(word_count: 3), date: Faker::Date.between(from: '2021-02-23', to: '2021-12-31'), category: categories.sample, capacity: rand(10..30))
+  user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Lorem.characters(number: 10))
+  puts "Created #{user.first_name}"
+end
+
+12.times do
+  event = Event.create!(name: names.sample, address: Faker::Address.city, description: Faker::Lorem.sentence(word_count: 3), date: Faker::Date.between(from: '2021-02-23', to: '2021-12-31'), category: categories.sample, capacity: rand(10..30), user_id: rand(1..12))
   puts "Created #{event.name}"
 end
