@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class="<%= 'home-body' if current_page?(root_path) %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
@@ -18,5 +18,17 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
 
+  <footer>
+    <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Hobbyist
+    </div>
+  </div>
+  </footer>
   </body>
 </html>

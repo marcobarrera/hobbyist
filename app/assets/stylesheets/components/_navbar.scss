@@ -1,6 +1,11 @@
-.navbar-lewagon {
+.navbar-lewagon  {
   justify-content: space-between;
   background: transparent;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,10 +16,16 @@
   width: 40px;
 }
 
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+
+}
+
 
 
 .navbar-lewagon .navbar-container {
-  color :blue
+  color :transparent;
 }
 
 ._1usxwsg6 {

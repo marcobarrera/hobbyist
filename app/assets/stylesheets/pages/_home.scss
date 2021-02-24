@@ -1,4 +1,68 @@
 // Specific CSS for your home-page
-body {
-  background-image: url('background1.png');
-  background-position: cover;}
+
+  // height: 800px;
+  // background-image: url('background1.png');
+  //
+  //
+.home-body {
+ background-color:black;
+
+}
+
+.home-body, html {
+    height: 100%;
+}
+
+h1 {
+  color: white;
+
+
+}
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("background1.png");
+  background-repeat: no-repeat;
+  height: 800px;
+  background-size: 10% 10%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.home-content {
+  margin-top: 800px;
+}
+
+.footer {
+  position:fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0px 50px;
+  color: white;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
