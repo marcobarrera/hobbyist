@@ -5,4 +5,31 @@
 <%= link_to "Events", events_path %>
 <h1 class="text-center">Take your Hobbie anywhere!</h1>
 <button class="position-center">Go!</button>
+
+
+<% @events.each do |event| %>
+<!-- Modal -->
+<div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name %></h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!-- Content of the modal -->
+        <p><%= event.date%></p>
+        <p>Category: <%= event.category%></p>
+        <p>Description: <%= event.description%></p>
+        <p>Capacity: <%= event.capacity%></p>
+        <p>Adress: <%= event.address%></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Save event</button>
+        <button type="button" class="btn btn-primary">Book event</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <%end%>
 </div>
