@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
-  validates :name, :capacity, :address :description, :category, :date, :photo, presence: true
+  validates :name, :capacity, :description, :category, :date, :photo, presence: true
   validate :event_date_cannot_be_in_the_past
   validates :category, inclusion: { in: %w(music sports poetry fitness),
     message: "%{value} is not valid" }
