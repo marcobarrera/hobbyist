@@ -1,0 +1,14 @@
+.cards-grid {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.card-body {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.card-event {
+  width: fit-content;
+}
