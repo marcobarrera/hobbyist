@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body class="<%= 'home-body' if current_page?(root_path) %>">
+  <body class="<%= 'home-body' if current_page?(pages_home_path) %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
