@@ -14,7 +14,7 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", pages_home_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item dropdown">
@@ -36,7 +36,7 @@
             <% if user_signed_in? %>
             <%= link_to "Messages","#", class: "dropdown-item" %>
             <%= link_to "Notifications","#", class: "dropdown-item" %>
-            <%= link_to "Host an event","#", class: "dropdown-item" %>
+            <%= link_to "Host an event", new_event_path, class: "dropdown-item" %>
             <%= link_to "Account","#", class: "dropdown-item" %>
             <%= link_to "Help","#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
@@ -48,7 +48,10 @@
             <a type="button" class="dropdown-item" data-toggle="modal" data-target="#LoginModal">
             Log in
             </a>
-            <%= link_to "Host an event","#", class: "dropdown-item" %>
+            <!-- <%= link_to "Host an event","#", class: "dropdown-item" %> -->
+            <a type="button" class="dropdown-item" data-toggle="modal" data-target="#SignupModal">
+            Host an event
+            </a>
 
           <% end %>
           </div>
