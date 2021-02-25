@@ -4,6 +4,7 @@
     <title>Hobbyist</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -12,17 +13,20 @@
   </head>
 
   <body class="<%= 'home-body' if current_page?(pages_home_path) %>">
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <div id="container">
+      <div id="main">
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
 
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-    <%= yield %>
-
-  <!-- <footer>
-    <div class="footer">
+        <%= yield %>
+      </div>
+    </div>
+  <footer>
+    <div id="footer" class="footer">
     <div class="footer-links">
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
@@ -32,6 +36,6 @@
       Hobbyist
     </div>
   </div>
-  </footer> -->
+  </footer>
   </body>
 </html>
