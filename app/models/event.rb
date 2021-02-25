@@ -14,4 +14,11 @@ class Event < ApplicationRecord
       errors.add(:date, "can't be in the past")
     end
   end
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_address,
+    against: [ :name, :address ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
