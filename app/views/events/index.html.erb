@@ -24,32 +24,17 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<!-- Top event cards -->
+<!-- Search Bar -->
 
-<div class="flat-cards">
-  <h1>Top Results</h1>
-    <div class="row">
-      <% @top_events.each do |event| %>
-        <div class="col-md-3">
-            <div class="card box-shadow m-3 card-event">
-              <% if event.photo.attached? %>
-                <%= cl_image_tag event.photo.key, height: 250, width: 350, crop: :fill %>
-              <% else  %>
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
-              <% end %>
+<%= form_tag events_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an event"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 
-              <div class="card-body">
-                <h5 class="card-title"><%= event.name %></h5>
-                <p class="card-text"><%= event.description %></p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
-                  <%= event.name %>
-                </button>
-              </div>
-            </div>
-        </div>
-      <% end %>
-    </div>
-</div>
 
 <!-- All event cards -->
 
@@ -97,7 +82,10 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Save event</button>
-        <button type="button" class="btn btn-primary"><%= link_to "Book Event", event %></button>
+        <%= simple_form_for([event, Booking.new]) do |f| %>
+          <%= f.submit "Book Event" %>
+        <% end %>
+
       </div>
     </div>
   </div>
