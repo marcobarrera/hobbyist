@@ -1,58 +1,60 @@
 <div class="hero-image position-absolute"></div>
 
+<div id="container">
+  <div id="main">
+    <div container class="position-center">
+      <div class="home-content" >
+        <h1 class="text-center"><strong>Take your Hobbie<br>anywhere!</strong></h1>
+      </div>
+    </div>
 
-<div class="home-content">
-<%= link_to "Events", events_path %>
-<h1 class="text-center">Take your Hobbie anywhere!</h1>
-<button class="position-center">Go!</button>
 
-<div class="flat-cards">
-    <div class="row">
-      <% @events.each do |event| %>
-        <div class="col-md-3">
-            <div class="card box-shadow m-3 card-event">
-              <% if event.photo.attached? %>
-                <%= cl_image_tag event.photo.key, height: 250, width: 350, crop: :fill %>
-              <% else  %>
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
-              <% end %>
 
-              <div class="card-body">
-                <h5 class="card-title"><%= event.name %></h5>
-                <p class="card-text"><%= event.description %></p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
-                  <%= event.name %>
-                </button>
-              </div>
+    <div class="flat-cards">
+        <div class="row">
+          <% @events.each do |event| %>
+            <div class="col-md-3">
+                <div class="card box-shadow m-3 card-event">
+                  <% if event.photo.attached? %>
+                    <%= cl_image_tag event.photo.key, height: 250, width: 350, crop: :fill %>
+                  <% else  %>
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
+                  <% end %>
+
+                  <div class="card-body">
+                    <h5 class="card-title"><%= event.name %></h5>
+                    <p class="card-text"><%= event.description %></p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
+                      <%= event.name %>
+                    </button>
+                  </div>
+                </div>
             </div>
+          <% end %>
         </div>
-      <% end %>
     </div>
-</div>
 
-<% @events.each do |event| %>
-<!-- Modal -->
-<div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name %></h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+    <% @events.each do |event| %>
+    <div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name %></h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <p><%= event.date%></p>
+            <p>Category: <%= event.category%></p>
+            <p>Description: <%= event.description%></p>
+            <p>Capacity: <%= event.capacity%></p>
+            <p>Adress: <%= event.address%></p>
+
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-       <!-- Content of the modal -->
-        <p><%= event.date%></p>
-        <p>Category: <%= event.category%></p>
-        <p>Description: <%= event.description%></p>
-        <p>Capacity: <%= event.capacity%></p>
-        <p>Adress: <%= event.address%></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Save event</button>
-        <button type="button" class="btn btn-primary">Book event</button>
-      </div>
-    </div>
+     </div>
+    <% end %>
   </div>
 </div>
-    <%end%>
-</div>
+
