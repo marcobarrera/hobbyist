@@ -1,11 +1,11 @@
-<div class="container">
+<div class="main-container">
   <h1 style="color: black">My Events</h1>
 
-  <div class="flat-cards">
+  <div class="booking-cards">
     <div class="row">
       <% @bookings.each do |booking| %>
-        <div class="col-md-2">
-            <div class="card box-shadow m-3 card-event">
+        <div class="col-4">
+            <div class="card box-shadow m-3 card-event" id = "booking">
               <% if booking.event.photo.attached? %>
                 <%= cl_image_tag booking.event.photo.key, height: 220, width: 300, crop: :fill %>
               <% else  %>
