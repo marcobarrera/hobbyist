@@ -1,5 +1,4 @@
-<div class="hero-image position-absolute"></div>
-
+<div class="hero-image position-absolute"></div>   
 <div id="container">
   <div id="main">
     <div container class="position-center">
@@ -23,7 +22,7 @@
 
     <div class="flat-cards">
         <div class="row">
-          <% @events.each do |event| %>
+          <% @events.each.count do |event| %>
             <div class="col-md-3">
                 <div class="card box-shadow m-3 card-event">
                   <% if event.photo.attached? %>
