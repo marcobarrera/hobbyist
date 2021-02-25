@@ -6,8 +6,7 @@
   padding-left: 3%;
   padding-right: 3%;
   padding-top: 2%;
-  align: center;
-
+  align-items: center;
 
 }
 
@@ -28,18 +27,16 @@
 }
 
 #heart {
+  position: absolute;
   color:white;
   font-size:25px;
-  padding-right: 1%;
-  align: center;
+  align-items: center;
   text-shadow: 0 0 02px gray;
   display:inline;
-  margin-right:-1px;
   background-color: transparent;
   border: none;
-
-
-
+  top: 48%;
+  right: 8%;
 }
 
 

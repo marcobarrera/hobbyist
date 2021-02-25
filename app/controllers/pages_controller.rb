@@ -3,5 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @events = Event.all
+    @categories = %w(music sports poetry fitness)
   end
+
 end
