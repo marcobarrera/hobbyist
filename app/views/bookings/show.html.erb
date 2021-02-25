@@ -1,0 +1,6 @@
+<h1>This is the Booking show page</h1>
+<h1 style="color: black"><%= @booking.event.name %> was booked successfully</h1>
+
+<p>Confirmation number: <%= rand(1000..3550) %></p>
+
+<%= link_to 'Your Booked Events', bookings_path %>  |
