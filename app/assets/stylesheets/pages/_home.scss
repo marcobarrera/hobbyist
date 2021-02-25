@@ -15,8 +15,8 @@
 
 h1 {
   color: white;
-
-
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold ;
 }
 /* The hero image */
 .hero-image{
@@ -25,7 +25,9 @@ h1 {
   background-repeat: no-repeat;
   height: 800px;
   background-size: 10% 10%;
-
+  border-bottom: 15px solid #FFFFFF;
+  
+  
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-size: cover;

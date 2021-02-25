@@ -1,5 +1,13 @@
+.card {
+  border-radius: 20px;
+
+}
+.row {
+  justify-content: center;
+}
 .cards-grid {
   display: flex;
+  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 }
