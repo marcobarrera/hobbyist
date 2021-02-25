@@ -7,6 +7,17 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<!-- Search Bar -->
+
+<%= form_tag events_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an event"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <!-- Top event cards -->
 
 <div class="flat-cards">
@@ -76,9 +87,7 @@
         <p>Category: <%= event.category%></p>
         <p>Description: <%= event.description%></p>
         <p>Capacity: <%= event.capacity%></p>
-        <p>Adress: <%= event.address%></p>
-        <p>Lat: <%= event.latitude%></p>
-        <p>Lng: <%= event.longitude%></p>
+        <p>Address: <%= event.address%></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Save event</button>
