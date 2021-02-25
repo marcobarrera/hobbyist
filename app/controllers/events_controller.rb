@@ -3,8 +3,17 @@ class EventsController < ApplicationController
   before_action :find_event, only: :show
 
   def index
-    @top_events =Event.all.first(3)
-    @events =Event.all
+    @top_events = Event.all.first(3)
+    @events = Event.all
+
+     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
+      }
+    end
   end
 
   def show

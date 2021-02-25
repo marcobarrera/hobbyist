@@ -67,3 +67,6 @@ gem 'devise'
 
 # Faker seeds
 gem 'faker'
+
+# Geocoder
+gem 'geocoder'
