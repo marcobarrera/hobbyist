@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @event = Event.find(params[:event_id])
     @booking = Booking.new(event: @event, user: current_user, confirmed: false)
     @booking.save
-    redirect_to booking_path(@event)
+    redirect_to booking_path(@booking)
   end
 
   def show
