@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     @top_events = Event.all.first(3)
 
     if params[:query].present?
-      @events = Event.search_by_name_and_address(params[:query])
+      @events = Event.search_by_name_and_address_and_category(params[:query])
     else
       @events = Event.all
     end
