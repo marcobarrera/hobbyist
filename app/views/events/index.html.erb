@@ -1,4 +1,14 @@
 
+<!-- Map -->
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<!-- Top event cards -->
+
 <div class="flat-cards">
   <h1>Top Results</h1>
     <div class="row">
@@ -23,6 +33,8 @@
       <% end %>
     </div>
 </div>
+
+<!-- All event cards -->
 
 <div class="flat-cards">
   <div class="row">
@@ -49,7 +61,6 @@
   </div>
 </div>
 
-
 <% @events.each do |event| %>
 <!-- Modal -->
 <div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
@@ -66,6 +77,8 @@
         <p>Description: <%= event.description%></p>
         <p>Capacity: <%= event.capacity%></p>
         <p>Adress: <%= event.address%></p>
+        <p>Lat: <%= event.latitude%></p>
+        <p>Lng: <%= event.longitude%></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Save event</button>
@@ -74,4 +87,4 @@
     </div>
   </div>
 </div>
-    <%end%>
+<%end%>
