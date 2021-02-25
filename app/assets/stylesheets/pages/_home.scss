@@ -4,6 +4,23 @@
   // background-image: url('background1.png');
   //
   //
+*{
+  margin: 0;
+  padding: 0;
+  margin-right: 3px;
+}
+
+#container{
+  min-height: 100%;
+
+}
+
+#main{
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+
 .home-body {
  background-color:black;
 
@@ -11,10 +28,13 @@
 
 .home-body, html {
     height: 100%;
+
 }
 
 h1 {
   color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: regular;
 
 
 }
@@ -33,24 +53,45 @@ h1 {
   top: 0;
   left: 0;
   right: 0;
+
 }
+
 
 .home-content {
   margin-top: 800px;
 }
 
+.wrapper {
+    text-align: center;
+}
+
+#go {
+    position: absolute center;
+    top: 130%;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-size: 20px;
+    padding:5px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
 .footer {
-  position:fixed;
+  position:relative;
   width: 100%;
+  margin-top: -100px;
+  clear:both;
   bottom: 0;
   left: 0;
   background: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 100px;
   padding: 0px 50px;
   color: white;
+  font-family: 'Roboto', sans-serif;
+
 }
 .footer-links {
   display: flex;

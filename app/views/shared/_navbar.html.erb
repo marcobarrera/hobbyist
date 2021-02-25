@@ -1,8 +1,7 @@
 
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-light sticky-top ">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-light sticky-top">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= "Hobbyist" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,14 +10,17 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="container navbar-nav mr-auto">
+        <div id="wrapper" class= "hobbyist">
+         <li class="Hobbyist nav-item active">
+          <%= link_to "Hobbyist", pages_home_path, class: "nav-link" %>
+        </div>
 
-        <li class="nav-item active">
-          <%= link_to "Home", pages_home_path, class: "nav-link" %>
-        </li>
+        <li class="h_container">
+          <button id="heart" type="button" class="fas fa-heart"></button>
 
         <li class="nav-item dropdown">
-
+      </ul>
           <button type="button" class="_1usxwsg6" aria-expanded="false" id="field-guide-toggle" data-testid="cypress-headernav-profile">
 
         <div aria-label="Main navigation menu">
@@ -102,7 +104,7 @@
           <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
           <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
           <% end %>
-        </div>    
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
