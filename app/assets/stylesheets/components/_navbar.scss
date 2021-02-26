@@ -1,12 +1,13 @@
 .navbar-lewagon  {
   justify-content: space-between;
-  background: transparent;
+  // background: transparent;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   padding-left: 3%;
   padding-right: 3%;
   padding-top: 2%;
   align-items: center;
+  z-index: 100;
 
 }
 
@@ -24,6 +25,8 @@
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0 0 05px gray;
+  color: white !important;
+
 
 
 }

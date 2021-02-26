@@ -102,12 +102,14 @@ h1 {
 #container{
   border-style: 15px solid #ffffff;
 
+
 }
 
 .search {
   position: absolute;
   top: 90%;
   right: 38%;
+
 }
 
 
@@ -115,6 +117,9 @@ h1 {
   background-color: black;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  // border-color: white;
+  // border-width: 5px;
+
 }
 
 .tita{
@@ -122,6 +127,7 @@ h1 {
   border-bottom-right-radius: 20px;
   background-color: black;
   border-color: rgb(255, 255, 255);
+  // border-width: 7px;
 }
 
 .text-center{
