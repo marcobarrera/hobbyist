@@ -12,19 +12,22 @@
   <div class="container">
       <div container class="position-center">
         <div class="search">
-          <%= form_tag events_path, class:"form-inline", method: :get do %>
+          <%= form_tag events_path, class:"form-inline mysearch" , method: :get do %>
           <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "form-control search-bar",
           placeholder: "Find an event"
           %>
           <%= submit_tag "Search", class: "btn btn-primary tita" %>
           <% end %>
         </div>
       </div>
-  </div>
+  
 
     <!--  -->
+
+</div>
+
 
     <div class="flat-cards">
       <h1 style="text-align: center; pb: 10px;">Happening Soon</h1>

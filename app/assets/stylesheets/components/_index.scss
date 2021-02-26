@@ -1,23 +1,33 @@
 // Import your components CSS files here.
-@import "alert";
-@import "avatar";
-@import "navbar";
-@import "card";
-@import "map";
-@import "modal";
+@import 'alert';
+@import 'avatar';
+@import 'navbar';
+@import 'card';
+@import 'map';
+@import 'modal';
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 #card-button {
   box-shadow: none;
 }
 
-.searchbar{
-    position: absolute;
-    top: 10%;
-    right: 35%;
+.my-search {
+  margin-left: 80px;
+  width: 572px;
+  border-radius: 30px;
+  border: 3px white solid;
+  text-align: center;
+}
+
+.searchbarindex {
+  flex-grow: 100;
+  background-color: black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: auto;
 }
 
 .field {
