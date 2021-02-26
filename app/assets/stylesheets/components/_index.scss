@@ -9,14 +9,20 @@ body {
     background-color: black;
 }
 
+#container{
+    border-style: 15px solid #ffffff;
+
+}
+
 .search {
-    padding-left: 38%;
+    position: absolute;
+    top: 90%;
+    right: 38%;
 }
 
 
 .form-control{
     background-color: black;
-    border-style: 15px  solid #ffffff;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -26,4 +32,11 @@ body {
     border-bottom-right-radius: 20px;
     background-color: black;
     border-color: rgb(255, 255, 255);
+}
+
+.text-center{
+    position: absolute;
+    top: 115%;
+    right: 38%;
+
 }

@@ -39,17 +39,14 @@ h1 {
 /* The hero image */
 .hero-image{
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: asset-url('backgroundimg.png');
+  background-image: asset-url('Rectangle.png');
   background-repeat: no-repeat;
   height: 800px;
   background-size: 10% 10%;
-
-
-
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-size: cover;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
