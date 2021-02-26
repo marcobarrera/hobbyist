@@ -111,27 +111,27 @@ h1 {
   top: 90%;
   right: 38%;
 
-=======
-.search {
-  position: absolute;
-  top: 550px;
-  right: 500px;
-  
->>>>>>> 66a1ed4... search bar
 }
 
 .mysearch{
+  width: 100vh;
   border-radius: 30px;
   border: 10px white solid;
+  text-align: center;
 }
 
-.form-control{
+.search-bar{
+  flex-grow: 100;
   background-color: black;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+<<<<<<< HEAD
   // border-color: white;
   // border-width: 5px;
 
+=======
+  margin: auto;
+>>>>>>> 0a6fc19... search bar
 }
 
 .tita{
