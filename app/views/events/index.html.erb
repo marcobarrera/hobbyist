@@ -17,9 +17,20 @@
 
 <div class="body" style="display: flex; overflow: auto;">
 
+<div class="" style="display: flex; margin-top: 80px!important;">
   <!-- All event cards -->
-
   <div class="flat-cards" style="height: 600px; width: 60%">
+  <!-- Search Bar -->
+<div class="searchbar">
+  <%= form_tag events_path, class:"form-inline my-search", method: :get do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control searchbarindex",
+  placeholder: "Find an event"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary tita" %>
+  <% end %>
+</div>
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
@@ -30,7 +41,6 @@
               <% else  %>
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
               <% end %>
-
               <div class="card-body">
                 <h5 class="card-title"><%= event.name.upcase %></h5>
                 <p class="card-text"><%= event.address.capitalize %></p>
@@ -41,17 +51,13 @@
       <% end %>
     </div>
   </div>
-
   <!-- Map -->
-
    <div id="map"
        style="position: -webkit-sticky; position: sticky; top: 0; width: 40%"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
 </div>
-
 <% @events.each do |event| %>
 <!-- Modal -->
   <div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
@@ -79,11 +85,9 @@
           <%= simple_form_for([event, Booking.new]) do |f| %>
             <%= f.submit "Book Event", class: "btn btn-dark b-r" %>
           <% end %>
-
         </div>
       </div>
     </div>
   </div>
 <%end%>
 </div>
-

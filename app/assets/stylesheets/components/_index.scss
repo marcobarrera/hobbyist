@@ -1,32 +1,31 @@
 // Import your components CSS files here.
-@import "alert";
-@import "avatar";
-@import "navbar";
-@import "card";
-@import "map";
-@import "modal";
+@import 'alert';
+@import 'avatar';
+@import 'navbar';
+@import 'card';
+@import 'map';
+@import 'modal';
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 #card-button {
   box-shadow: none;
 }
 
-
-.my-search{
-    width: 80vh;
-    border-radius: 30px;
-    border: 3px white solid;
-    text-align: center;
+.my-search {
+  margin-left: 80px;
+  width: 572px;
+  border-radius: 30px;
+  border: 3px white solid;
+  text-align: center;
 }
 
-.searchbarindex{
-    flex-grow: 100;
-    background-color: black;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    margin: auto;
+.searchbarindex {
+  flex-grow: 100;
+  background-color: black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: auto;
 }
->>>>>>> 8465781... search bar home and index
