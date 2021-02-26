@@ -9,8 +9,7 @@
 
    <!--  Search Bar -->
 
-  <div id="container">
-      <div container class="position-center">
+      <div container class="container">
         <div class="search">
           <%= form_tag events_path, class:"form-inline mysearch" , method: :get do %>
           <%= text_field_tag :query,
@@ -22,9 +21,12 @@
           <% end %>
         </div>
       </div>
-  </div>
+  
 
     <!--  -->
+
+</div>
+
 
     <div class="flat-cards">
         <div class="row">
@@ -69,7 +71,5 @@
           </div>
         </div>
       </div>
-     </div>
-    <% end %>
-</div>
-
+    </div>
+   <% end %>

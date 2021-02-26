@@ -105,21 +105,25 @@ h1 {
 }
 
 .search {
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
-  top: 550px;
-  right: 500px;
-  
+  top: 95%;
 }
 
 .mysearch{
+  width: 100vh;
   border-radius: 30px;
   border: 10px white solid;
+  text-align: center;
 }
 
-.form-control{
+.search-bar{
+  flex-grow: 100;
   background-color: black;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  margin: auto;
 }
 
 .tita{
