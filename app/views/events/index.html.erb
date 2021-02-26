@@ -26,6 +26,7 @@
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
+          <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
             <div class="card box-shadow m-3 card-event">
               <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key, height: 220, width: 300, crop: :fill %>
@@ -36,42 +37,14 @@
               <div class="card-body">
                 <h5 class="card-title"><%= event.name %></h5>
                 <p class="card-text"><%= event.address %></p>
-                <button
-                type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
                   <%= event.name %>
-                </button>
               </div>
             </div>
+          </button>
         </div>
       <% end %>
     </div>
   </div>
-
-
-<div class="flat-cards">
-  <div class="row">
-    <% @events.each do |event| %>
-      <div class="col-md-3">
-        <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
-          <div class="card box-shadow m-3 card-event">
-            <% if event.photo.attached? %>
-              <%= cl_image_tag event.photo.key, height: 220, width: 300, crop: :fill %>
-            <% else  %>
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
-            <% end %>
-
-            <div class="card-body">
-              <h5 class="card-title"><%= event.name %></h5>
-              <p class="card-text"><%= event.address %></p>
-              <!-- <button
-              type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>"> -->
-                <%= event.name %>
-              <!-- </button> -->
-            </div>
-          </div>
-         </button>
-      </div>
-    <% end %>
 
   <!-- Map -->
 
