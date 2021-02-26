@@ -9,21 +9,8 @@ body {
     background-color: black;
 }
 
-.search {
-    padding-left: 38%;
-}
-
-
-.form-control{
-    background-color: black;
-    border-style: 15px  solid #ffffff;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.tita{
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: black;
-    border-color: rgb(255, 255, 255);
+.searchbar{
+    position: absolute;
+    top: 10%;
+    right: 35%;
 }

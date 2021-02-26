@@ -1,9 +1,8 @@
 <!-- Search Bar -->
 
 <div id="container">
-  <div id="main">
     <div container class="position-center">
-      <div class="search">
+      <div class="searchbar">
         <%= form_tag events_path, class:"form-inline", method: :get do %>
         <%= text_field_tag :query,
         params[:query],
@@ -14,7 +13,6 @@
         <% end %>
       </div>
     </div>
-  </div>
 </div>
 
 
@@ -29,7 +27,7 @@
           <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
             <div class="card box-shadow m-3 card-event" style="grid-auto-rows: auto;">
               <% if event.photo.attached? %>
-                <%= cl_image_tag event.photo.key, height: 220, width: 300, crop: :fill %>
+                <%= cl_image_tag event.photo.key, height: 220, width: 450, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
               <% else  %>
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
               <% end %>
@@ -62,7 +60,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name %></h5>
-          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>
         </div>
         <div class="modal-body">
          <!-- Content of the modal -->

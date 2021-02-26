@@ -1,6 +1,6 @@
 <div class="hero-image position-absolute"></div>
+
 <div id="container">
-  <div id="main">
     <div container class="position-center">
       <div class="home-content" >
         <h1 class="text-center"><strong>Take your Hobby<br>anywhere!</strong></h1>
@@ -10,7 +10,6 @@
    <!--  Search Bar -->
 
   <div id="container">
-    <div id="main">
       <div container class="position-center">
         <div class="search">
           <%= form_tag events_path, class:"form-inline", method: :get do %>
@@ -23,19 +22,18 @@
           <% end %>
         </div>
       </div>
-    </div>
   </div>
 
     <!--  -->
 
     <div class="flat-cards">
         <div class="row">
-          <% @events.each.count do |event| %>
-            <div class="col-md-3">
-              <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
-                <div class="card box-shadow m-3 card-event">
+          <% @events.each do |event| %>
+            <div>
+              <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>" style="grid-template-columns: 1fr 1fr 1fr">
+                <div class="card box-shadow card-event">
                   <% if event.photo.attached? %>
-                    <%= cl_image_tag event.photo.key, height: 250, width: 350, crop: :fill %>
+                    <%= cl_image_tag event.photo.key, height: 220, width: 250, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
                   <% else  %>
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
                   <% end %>
@@ -73,6 +71,5 @@
       </div>
      </div>
     <% end %>
-  </div>
 </div>
 
