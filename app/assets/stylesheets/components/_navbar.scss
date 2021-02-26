@@ -1,11 +1,16 @@
-.navbar-lewagon {
+.navbar-lewagon  {
   justify-content: space-between;
   // background: transparent;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
   align-items: center;
   z-index: 100;
+
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -21,77 +26,85 @@
   font-weight: bold;
   text-shadow: 0 0 05px gray;
   color: white !important;
+
+
+
 }
 
-.events {
-  position: absolute;
-  color: white;
-  font-size: 25px;
+.events{
+
+   position: absolute;
+  color:white;
+  font-size:25px;
   align-items: center;
   text-shadow: 0 0 05px gray;
-  display: inline;
+  display:inline;
   background-color: transparent;
   top: 38%;
   right: 12%;
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
+
 }
 
 #heart {
   position: absolute;
-  color: white;
-  font-size: 25px;
+  color:white;
+  font-size:25px;
   align-items: center;
   text-shadow: 0 0 02px gray;
-  display: inline;
+  display:inline;
   background-color: transparent;
   border: none;
+  top: 48%;
+  right: 10%;
 }
 
+
 .navbar-lewagon .navbar-container {
-  color: transparent;
+  color :transparent;
 }
 
 ._1usxwsg6 {
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-  background: transparent !important;
-  border: 1px solid #dddddd !important;
-  color: #222222 !important;
-  cursor: pointer !important;
-  display: -webkit-inline-box !important;
-  display: -moz-inline-box !important;
-  display: -ms-inline-flexbox !important;
-  display: -webkit-inline-flex !important;
-  display: inline-flex !important;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  margin: 0px !important;
-  outline: none !important;
-  overflow: visible !important;
-  padding: 5px 5px 5px 12px !important;
-  text-align: inherit !important;
-  text-decoration: none !important;
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
-  -ms-user-select: auto !important;
-  user-select: auto !important;
-  -webkit-align-items: center !important;
-  align-items: center !important;
-  background-color: #ffffff !important;
-  border-radius: 21px !important;
-  height: 42px !important;
-  position: relative !important;
-  vertical-align: middle !important;
-  -webkit-transition: box-shadow 0.2s ease !important;
-  -moz-transition: box-shadow 0.2s ease !important;
-  transition: box-shadow 0.2s ease !important;
-  z-index: 1 !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: transparent !important;
+    border: 1px solid #DDDDDD !important;
+    color: #222222 !important;
+    cursor: pointer !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    margin: 0px !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 5px 5px 5px 12px !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    background-color: #FFFFFF !important;
+    border-radius: 21px !important;
+    height: 42px !important;
+    position: relative !important;
+    vertical-align: middle !important;
+    -webkit-transition: box-shadow 0.2s ease !important;
+    -moz-transition: box-shadow 0.2s ease !important;
+    transition: box-shadow 0.2s ease !important;
+    z-index: 1 !important;
 }
 
 .navbar {
@@ -118,14 +131,16 @@
 
 div.hobbyist {
   font-family: 'Roboto', sans-serif;
-
-  margin: 0;
-  padding: 0;
+  padding-top: 2%;
+  margin:0;
+  padding:0;
   font-weight: bold;
   font-size: 60px;
   text-align: left;
-  margin-right: 819px;
+  margin-right:819px;
+
 }
 .nav-link {
   color: white !important;
 }
+
