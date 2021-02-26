@@ -99,6 +99,7 @@ h1 {
   opacity: 1;
 }
 
+<<<<<<< HEAD
 #container{
   border-style: 15px solid #ffffff;
 
@@ -110,8 +111,19 @@ h1 {
   top: 90%;
   right: 38%;
 
+=======
+.search {
+  position: absolute;
+  top: 550px;
+  right: 500px;
+  
+>>>>>>> 66a1ed4... search bar
 }
 
+.mysearch{
+  border-radius: 30px;
+  border: 10px white solid;
+}
 
 .form-control{
   background-color: black;
