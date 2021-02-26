@@ -104,17 +104,17 @@ h1 {
   opacity: 1;
 }
 
-#container{
-  border-style: 15px solid #ffffff;
-
-}
-
 .search {
   position: absolute;
-  top: 90%;
-  right: 38%;
+  top: 550px;
+  right: 500px;
+  
 }
 
+.mysearch{
+  border-radius: 30px;
+  border: 10px white solid;
+}
 
 .form-control{
   background-color: black;
