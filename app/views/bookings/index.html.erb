@@ -7,7 +7,7 @@
         <div class="col-4">
             <div class="card box-shadow m-3 card-event" id = "booking">
               <% if booking.event.photo.attached? %>
-                <%= cl_image_tag booking.event.photo.key, height: 220, width: 300, crop: :fill %>
+                <%= cl_image_tag booking.event.photo.key, height: 220, width: 350, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
               <% else  %>
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
               <% end %>
