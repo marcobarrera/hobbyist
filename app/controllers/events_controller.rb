@@ -3,7 +3,6 @@ class EventsController < ApplicationController
   before_action :find_event, only: :show
 
   def index
-    @top_events = Event.all.first(3)
 
     if params[:query].present?
       @events = Event.search_by_name_and_address_and_category(params[:query])
