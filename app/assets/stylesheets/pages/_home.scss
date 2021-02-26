@@ -1,28 +1,30 @@
 // Specific CSS for your home-page
 
-// height: 800px;
-// background-image: url('background1.png');
-//
-//
-* {
+  // height: 800px;
+  // background-image: url('background1.png');
+  //
+  //
+*{
   margin: 0;
   padding: 0;
   margin-right: 3px;
 }
 
-#container {
+#container{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-#main {
+#main{
   overflow: auto;
   padding-bottom: 100px;
 }
 
+
 .home-body {
-  background-color: black;
+ background-color:black;
+
 }
 
 h1 {
@@ -31,7 +33,7 @@ h1 {
   font-weight: regular;
 }
 /* The hero image */
-.hero-image {
+.hero-image{
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: asset-url('Rectangle.png');
   background-repeat: no-repeat;
@@ -44,31 +46,33 @@ h1 {
   top: 0;
   left: 0;
   right: 0;
+
 }
+
 
 .home-content {
   margin-top: 800px;
 }
 
 .wrapper {
-  text-align: center;
+    text-align: center;
 }
 
 #go {
-  position: absolute center;
-  top: 130%;
-  background-color: white;
-  color: black;
-  border-radius: 8px;
-  font-size: 20px;
-  padding: 5px 20px;
-  font-family: 'Roboto', sans-serif;
+    position: absolute center;
+    top: 130%;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-size: 20px;
+    padding:5px 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer {
   margin-top: auto;
   width: 100%;
-  clear: both;
+  clear:both;
   bottom: 0;
   left: 0;
   background: black;
@@ -79,6 +83,7 @@ h1 {
   padding: 0px 50px;
   color: white;
   font-family: 'Roboto', sans-serif;
+
 }
 .footer-links {
   display: flex;
@@ -93,34 +98,31 @@ h1 {
 .footer-links a:hover {
   opacity: 1;
 }
-#container {
+
+#container{
   border-style: 15px solid #ffffff;
+
+
 }
 
 .search {
   position: absolute;
   top: 90%;
   right: 38%;
+
 }
 
-.mysearch {
-  width: 100vh;
-  border-radius: 30px;
-  border: 10px white solid;
-  text-align: center;
-}
 
-.search-bar {
-  flex-grow: 100;
+.form-control{
   background-color: black;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   // border-color: white;
   // border-width: 5px;
-  margin: auto;
+
 }
 
-.tita {
+.tita{
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: black;
@@ -128,21 +130,23 @@ h1 {
   // border-width: 7px;
 }
 
-.text-center {
+.text-center{
   position: absolute;
   top: 115%;
   right: 38%;
+
 }
 
 // .card-event {
 //   border: 2px solid white;
 // }
 
-.card-title {
+.card-title{
   font-family: 'roboto', sans-serif;
   font-weight: bold;
 }
 
-.card-text {
+.card-text{
   font-family: 'roboto', sans-serif;
+
 }
