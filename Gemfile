@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| "https://gi..thub.com/#{repo}.git" }
 
 ruby '2.6.3'
 
@@ -67,8 +67,6 @@ gem 'devise'
 
 # Faker seeds
 gem 'faker'
-
 # Geocoder
 gem 'geocoder'
-
 gem 'pg_search', '~> 2.3.0'
