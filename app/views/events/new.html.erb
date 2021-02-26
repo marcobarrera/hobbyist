@@ -2,24 +2,24 @@
 <h1><strong>Create your Event!</strong></h1>
 </div>
 
-<div class="container border border-light rounded-lg">
+<div class="container border border-light rounded-lg" style="background:white;">
   <%= simple_form_for(@event) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    <div class="form-inputs text-white p-3">
-      <%= f.input :name, placeholder:"First Name and Last Name"%>
-      <%= f.input :address, placeholder:"Street, City, State and Zip Code" %>
-      <%= f.input :description, placeholder:"Write a short description of your event..." %>
-      <%= f.input :date, as: :date, html5: true %>
-      <%= f.select :category, %w(music sports poetry fitness) %>
-      <%= f.input :capacity, placeholder:"How many people are allowed? " %>
+    <div class="p-3">
+      <%= f.input :name, input_html: { class: "field" }, placeholder:"First Name and Last Name" %>
+      <%= f.input :address, input_html: { class: "field" }, placeholder:"Street, City, State and Zip Code" %>
+      <%= f.input :description, input_html: { class: "field" }, placeholder:"Write a short description of your event..." %>
+      <%= f.input :date, as: :date, html5: true, input_html: { class: "field" } %>
+      <%= f.input :category, :collection => %w(music sports poetry fitness), input_html: { class: "field" } %>
+      <%= f.input :capacity, placeholder:"How many people are allowed? ", input_html: { class: "field" } %>
     </div>
 
      <%= f.input :photo, as: :file %>
 
-    <div class="form-actions mb-5 p-3 rounded-sm btn btn-info">
-      <%= f.button :submit %>
+    <div class="form-actions mb-5 p-3 rounded-sm btn">
+      <%= f.button :submit, class: "btn btn-dark b-r-1" %>
     </div>
   <% end %>
 </div>
