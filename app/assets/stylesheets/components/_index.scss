@@ -9,34 +9,8 @@ body {
     background-color: black;
 }
 
-#container{
-    border-style: 15px solid #ffffff;
-
-}
-
-.search {
+.searchbar{
     position: absolute;
-    top: 90%;
-    right: 38%;
-}
-
-
-.form-control{
-    background-color: black;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.tita{
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: black;
-    border-color: rgb(255, 255, 255);
-}
-
-.text-center{
-    position: absolute;
-    top: 115%;
-    right: 38%;
-
+    top: 10%;
+    right: 35%;
 }
