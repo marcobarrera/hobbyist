@@ -1,19 +1,16 @@
 <!-- Search Bar -->
-
-<div id="container">
-    <div container class="position-center">
+    <div container class="container">
       <div class="searchbar">
-        <%= form_tag events_path, class:"form-inline", method: :get do %>
+        <%= form_tag events_path, class:"form-inline my-search", method: :get do %>
         <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control searchbarindex",
         placeholder: "Find an event"
         %>
         <%= submit_tag "Search", class: "btn btn-primary tita" %>
         <% end %>
       </div>
     </div>
-</div>
 
 
 <div class="body" style="display: flex; overflow: auto;">
