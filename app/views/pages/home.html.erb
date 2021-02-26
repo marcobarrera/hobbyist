@@ -39,11 +39,9 @@
                   <% end %>
 
                   <div class="card-body">
-                    <h5 class="card-title"><%= event.name %></h5>
-                    <p class="card-text"><%= event.description %></p>
+                    <h5 class="card-title"><%= event.name.upcase %></h5>
+                    <p class="card-text"><%= event.description.capitalize %></p>
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>"> -->
-                      <%= event.name %>
-
                   </div>
                 </div>
               </button>

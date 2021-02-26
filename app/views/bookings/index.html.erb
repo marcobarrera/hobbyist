@@ -13,8 +13,8 @@
               <% end %>
 
               <div class="card-body">
-                <h5 class="card-title"><%= booking.event.name %></h5>
-                <p class="card-text"><%= booking.event.address %></p>
+                <h5 class="card-title"><%= booking.event.name.upcase %></h5>
+                <p class="card-text"><%= booking.event.address.capitalize %></p>
               </div>
             </div>
         </div>
