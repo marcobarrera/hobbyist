@@ -24,7 +24,7 @@
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
-          <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
+          <button id="card-button" type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
             <div class="card box-shadow m-3 card-event" style="grid-auto-rows: auto;">
               <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key, height: 220, width: 350, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
