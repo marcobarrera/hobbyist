@@ -14,14 +14,19 @@ body {
   box-shadow: none;
 }
 
-.searchbar{
-    position: absolute;
-<<<<<<< HEAD
-    top: 20%;
-    right: 35%;
+
+.my-search{
+    width: 80vh;
+    border-radius: 30px;
+    border: 3px white solid;
+    text-align: center;
 }
-=======
-    top: 100px;
-    right: 500px;
+
+.searchbarindex{
+    flex-grow: 100;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: auto;
 }
->>>>>>> 66a1ed4... search bar
+>>>>>>> 8465781... search bar home and index
