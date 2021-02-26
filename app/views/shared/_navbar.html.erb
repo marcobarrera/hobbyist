@@ -1,54 +1,48 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-light sticky-top">
-  <%= link_to "#", class: "navbar-brand" do %>
-  <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+ <%= link_to "Hobbyist", pages_home_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="container navbar-nav mr-auto">
-      <div id="wrapper" class= "hobbyist">
-        <li class="Hobbyist nav-item active">
-          <%= link_to "Hobbyist", pages_home_path, class: "nav-link" %>
-        </li>
-      </div>
-      <li class="events">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
         <%= link_to "Events", events_path, class: "nav-link" %>
       </li>
-      <li class="h_container">
-      <button id="heart" type="button" class="fas fa-heart"></button>
+      <li class="nav-item dropdown">
+        <button type="button" class="_1usxwsg6" aria-expanded="false" id="field-guide-toggle" data-testid="cypress-headernav-profile">
+            <div aria-label="Main navigation menu">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                <g fill="none" fill-rule="nonzero">
+                    <path d="m2 16h28"></path>
+                    <path d="m2 24h28"></path>
+                    <path d="m2 8h28"></path>
+                </g>
+            </svg>
+            </div>
+          <%= image_tag "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <% if user_signed_in? %>
+                <%= current_user.first_name %>
+                <%= link_to "Bookings", bookings_path, class: "dropdown-item" %>
+                <%= link_to "Host an event", new_event_path, class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                <% else %>
+                  <a type="button" class="dropdown-item" data-toggle="modal" data-target="#SignupModal">
+                    Sign up
+                  </a>
+                  <a type="button" class="dropdown-item" data-toggle="modal" data-target="#LoginModal">
+                    Log in
+                  </a>
+                  <a type="button" class="dropdown-item" data-toggle="modal" data-target="#SignupModal">
+                    Host an event
+                  </a>
+              <% end %>
+            </div>
+        </button>
       </li>
-      <!-- <li class="nav-item dropdown"></li>  -->
     </ul>
-    <button type="button" class="_1usxwsg6" aria-expanded="false" id="field-guide-toggle" data-testid="cypress-headernav-profile">
-      <div aria-label="Main navigation menu">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
-          <g fill="none" fill-rule="nonzero">
-              <path d="m2 16h28"></path>
-              <path d="m2 24h28"></path>
-              <path d="m2 8h28"></path>
-          </g>
-        </svg>
-      </div>
-      <%= image_tag "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <% if user_signed_in? %>
-        <%= current_user.first_name %>
-        <%= link_to "Bookings", bookings_path, class: "dropdown-item" %>
-        <%= link_to "Host an event", new_event_path, class: "dropdown-item" %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        <% else %>
-          <a type="button" class="dropdown-item" data-toggle="modal" data-target="#SignupModal">
-            Sign up
-          </a>
-          <a type="button" class="dropdown-item" data-toggle="modal" data-target="#LoginModal">
-            Log in
-          </a>
-          <a type="button" class="dropdown-item" data-toggle="modal" data-target="#SignupModal">
-            Host an event
-          </a>
-      <% end %>
-    </div>
   </div>
 </div>
 <!-- Modal SignUp -->
