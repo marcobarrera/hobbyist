@@ -10,14 +10,12 @@ body {
 }
 
 .searchbar{
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 20%;
+    
 }
 
 .my-search{
-    width: 80vh;
+    margin-left: 80px;
+    width: 572px;
     border-radius: 30px;
     border: 3px white solid;
     text-align: center;
