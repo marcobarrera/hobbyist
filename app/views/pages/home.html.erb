@@ -1,9 +1,9 @@
-<div class="hero-image position-absolute"></div>   
+<div class="hero-image position-absolute"></div>
 <div id="container">
   <div id="main">
     <div container class="position-center">
       <div class="home-content" >
-        <h1 class="text-center"><strong>Take your Hobbie<br>anywhere!</strong></h1>
+        <h1 class="text-center"><strong>Take your Hobby<br>anywhere!</strong></h1>
       </div>
     </div>
 
@@ -32,6 +32,7 @@
         <div class="row">
           <% @events.each.count do |event| %>
             <div class="col-md-3">
+              <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
                 <div class="card box-shadow m-3 card-event">
                   <% if event.photo.attached? %>
                     <%= cl_image_tag event.photo.key, height: 250, width: 350, crop: :fill %>
@@ -42,11 +43,12 @@
                   <div class="card-body">
                     <h5 class="card-title"><%= event.name %></h5>
                     <p class="card-text"><%= event.description %></p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>"> -->
                       <%= event.name %>
-                    </button>
+
                   </div>
                 </div>
+              </button>
             </div>
           <% end %>
         </div>

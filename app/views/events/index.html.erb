@@ -26,6 +26,7 @@
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
+          <button type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
             <div class="card box-shadow m-3 card-event">
               <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key, height: 220, width: 300, crop: :fill %>
@@ -36,12 +37,10 @@
               <div class="card-body">
                 <h5 class="card-title"><%= event.name %></h5>
                 <p class="card-text"><%= event.address %></p>
-                <button
-                type="button" class="btn btn-primary" data-toggle="modal" data-target="#event<%=event.id%>">
                   <%= event.name %>
-                </button>
               </div>
             </div>
+          </button>
         </div>
       <% end %>
     </div>
@@ -85,4 +84,5 @@
     </div>
   </div>
 <%end%>
+</div>
 
