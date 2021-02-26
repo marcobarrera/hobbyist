@@ -20,6 +20,24 @@
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
   font-weight: bold;
+  text-shadow: 0 0 05px gray;
+
+
+}
+
+.events{
+
+   position: absolute;
+  color:white;
+  font-size:25px;
+  align-items: center;
+  text-shadow: 0 0 05px gray;
+  display:inline;
+  background-color: transparent;
+  top: 38%;
+  right: 12%;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -32,7 +50,6 @@
   display:inline;
   background-color: transparent;
   border: none;
-
 }
 
 
