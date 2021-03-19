@@ -3,19 +3,18 @@ class EventsController < ApplicationController
   before_action :find_event, only: :show
 
   def index
-
     if params[:query].present?
       @events = Event.search_by_name_and_address_and_category(params[:query])
     else
       @events = Event.all
     end
 
-     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
+        infoWindow: render_to_string(partial: "info_window", locals: { event: event }),
       }
     end
   end
@@ -31,9 +30,9 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      redirect_to events_path, notice: 'Event was successfully created.'
+      redirect_to events_path, notice: "Event was successfully created."
     else
-      flash[:notice] = 'Sorry, something went wrong!'
+      flash[:notice] = "Sorry, something went wrong!"
       render :new
     end
   end

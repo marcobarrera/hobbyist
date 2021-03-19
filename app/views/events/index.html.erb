@@ -3,12 +3,11 @@
 
 
       <div class="searchbar">
-        <%= form_tag events_path, class:"form-inline", method: :get do %>
+        <%= form_tag events_path, class: "form-inline", method: :get do %>
         <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find an event"
-        %>
+                           params[:query],
+                           class: "form-control",
+                           placeholder: "Find an event" %>
         <%= submit_tag "Search", class: "btn btn-primary tita" %>
         <% end %>
       </div>
@@ -24,11 +23,11 @@
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
-          <button id="card-button" type="button" class="btn" data-toggle="modal" data-target="#event<%=event.id%>">
+          <button id="card-button" type="button" class="btn" data-toggle="modal" data-target="#event<%= event.id %>">
             <div class="card box-shadow m-3 card-event" style="grid-auto-rows: auto;">
               <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key, height: 220, width: 350, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
-              <% else  %>
+              <% else %>
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
               <% end %>
 
@@ -48,32 +47,32 @@
    <div id="map"
        style="position: -webkit-sticky; position: sticky; top: 0; width: 40%"
        data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+       data-mapbox-api-key="<%= ENV["MAPBOX_API_KEY"] %>">
   </div>
 
 </div>
 
 <% @events.each do |event| %>
 <!-- Modal -->
-  <div class="modal fade" id="event<%=event.id%>" tabindex="-1" aria-labelledby="event<%=event.id%>Label" aria-hidden="true">
+  <div class="modal fade" id="event<%= event.id %>" tabindex="-1" aria-labelledby="event<%= event.id %>Label" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="my-header">
-          <h5 class="modal-title" id="event<%=event.id%>Label"><%= event.name.upcase %></h5>
+          <h5 class="modal-title" id="event<%= event.id %>Label"><%= event.name.upcase %></h5>
           <button type="button" class="btn-close btn-dark model-x" data-dismiss="modal" aria-label="Close">X</button>
         </div>
         <div class="modal-body">
          <!-- Content of the modal -->
           <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key, height: 220, width: 350, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
-          <% else  %>
+          <% else %>
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8? ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Card image cap">
               <% end %>
-          <p><%= event.date%></p>
-          <p>Category: <%= event.category.capitalize%></p>
-          <p>Description: <%= event.description.capitalize%></p>
-          <p>Capacity: <%= event.capacity%></p>
-          <p>Address: <%= event.address.capitalize%></p>
+          <p><%= event.date %></p>
+          <p>Category: <%= event.category.capitalize %></p>
+          <p>Description: <%= event.description.capitalize %></p>
+          <p>Capacity: <%= event.capacity %></p>
+          <p>Address: <%= event.address.capitalize %></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark b-r" data-dismiss="modal">Save Event</button>
@@ -85,6 +84,6 @@
       </div>
     </div>
   </div>
-<%end%>
+<% end %>
 </div>
 
