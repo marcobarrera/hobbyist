@@ -8,12 +8,12 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="p-3">
-      <%= f.input :name, input_html: { class: "field" }, placeholder:"First Name and Last Name" %>
-      <%= f.input :address, input_html: { class: "field" }, placeholder:"Street, City, State and Zip Code" %>
-      <%= f.input :description, input_html: { class: "field" }, placeholder:"Write a short description of your event..." %>
+      <%= f.input :name, input_html: { class: "field" }, placeholder: "First Name and Last Name" %>
+      <%= f.input :address, input_html: { class: "field" }, placeholder: "Street, City, State and Zip Code" %>
+      <%= f.input :description, input_html: { class: "field" }, placeholder: "Write a short description of your event..." %>
       <%= f.input :date, as: :date, html5: true, input_html: { class: "field" } %>
       <%= f.input :category, :collection => %w(music sports poetry fitness), input_html: { class: "field" } %>
-      <%= f.input :capacity, placeholder:"How many people are allowed? ", input_html: { class: "field" } %>
+      <%= f.input :capacity, placeholder: "How many people are allowed? ", input_html: { class: "field" } %>
     </div>
 
      <%= f.input :photo, as: :file %>

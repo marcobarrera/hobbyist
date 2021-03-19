@@ -71,14 +71,14 @@
         <div class="form-inputs">
           <%= f.input :first_name,
                       required: true,
-                      autofocus: true%>
+                      autofocus: true %>
           <%= f.input :last_name,
                       required: true,
-                      autofocus: true%>
+                      autofocus: true %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "email" }%>
+                      input_html: { autocomplete: "email" } %>
           <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -92,7 +92,7 @@
             Log in
         </a>
         <div>
-          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <% -if devise_mapping.recoverable? && controller_name != "passwords" && controller_name != "registrations" %>
           <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
           <% end %>
         </div>
@@ -134,7 +134,7 @@
             Sign up
       </a>
       <div>
-        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <% -if devise_mapping.recoverable? && controller_name != "passwords" && controller_name != "registrations" %>
         <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
         <% end %>
       </div>

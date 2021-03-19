@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
@@ -15,5 +15,4 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     get events_create_url
     assert_response :success
   end
-
 end
