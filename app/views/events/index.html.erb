@@ -1,7 +1,7 @@
 <!-- Search Bar -->
 
-<div class="container">
-    <div container class="position-center">
+
+
       <div class="searchbar">
         <%= form_tag events_path, class:"form-inline", method: :get do %>
         <%= text_field_tag :query,
@@ -12,8 +12,8 @@
         <%= submit_tag "Search", class: "btn btn-primary tita" %>
         <% end %>
       </div>
-    </div>
-</div>
+
+
 
 
 <div class="body" style="display: flex; overflow: auto;">

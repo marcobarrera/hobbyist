@@ -5,22 +5,20 @@
 @import "card";
 @import "map";
 @import "modal";
-
 body {
     background-color: black;
 }
 
 #card-button {
-  box-shadow: none;
+    box-shadow: none;
 }
 
-.searchbar{
-    position: absolute;
-    top: 10%;
-    right: 35%;
+.searchbar {
+    margin: auto;
+    padding: 10px;
 }
 
 .field {
-  background-color: white !important;
-  border-radius: 20px;
+    background-color: white !important;
+    border-radius: 20px;
 }
