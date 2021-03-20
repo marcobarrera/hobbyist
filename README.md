@@ -1,5 +1,9 @@
 # Hobbyist
 
+## Demo
+
+<img src="demo.gif" alt="demo" />
+
 ## Description
 
 Web app that allows the user to find events that cater to thier hobbies.
