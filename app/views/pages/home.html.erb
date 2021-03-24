@@ -1,26 +1,26 @@
 <div class="hero-image position-absolute"></div>
 
 <div id="container">
-    <div container class="position-center">
-      <div class="home-content" >
-        <h1 class="text-center"><strong>Take your Hobby<br>anywhere!</strong></h1>
-      </div>
-    </div>
+
+  <div class="home-content" >
+    <h1 class="text-center"><strong>Take your Hobby<br>anywhere!</strong></h1>
+  </div>
+
 
    <!--  Search Bar -->
 
   <div class="container">
-      <div container class="position-center">
         <div class="search">
           <%= form_tag events_path, class: "form-inline", method: :get do %>
+          <div style="display:flex">
           <%= text_field_tag :query,
                              params[:query],
                              class: "form-control",
                              placeholder: "Find an event" %>
           <%= submit_tag "Search", class: "btn btn-primary tita" %>
+          </div>
           <% end %>
         </div>
-      </div>
   </div>
 
     <!--  -->

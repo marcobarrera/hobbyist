@@ -1,14 +1,14 @@
 <!-- Search Bar -->
 
-
-
       <div class="searchbar">
         <%= form_tag events_path, class: "form-inline", method: :get do %>
+        <div style="display:flex">
         <%= text_field_tag :query,
                            params[:query],
                            class: "form-control",
                            placeholder: "Find an event" %>
         <%= submit_tag "Search", class: "btn btn-primary tita" %>
+        </div>
         <% end %>
       </div>
 
@@ -19,7 +19,7 @@
 
   <!-- All event cards -->
 
-  <div class="flat-cards" style="height: 600px; width: 60%">
+  <div class="flat-cards col-12 col-lg-7" style="height: 600px; width: 60%">
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-md-5">
