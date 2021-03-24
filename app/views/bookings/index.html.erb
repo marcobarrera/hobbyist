@@ -4,7 +4,7 @@
   <div class="booking-cards">
     <div class="row">
       <% @bookings.each do |booking| %>
-        <div class="col-4">
+        <div class="col-12 col-lg-3">
             <div class="card box-shadow m-3 card-event" id = "booking">
               <% if booking.event.photo.attached? %>
                 <%= cl_image_tag booking.event.photo.key, height: 220, width: 350, crop: :fill, class: "card-img-top", style: "object-fit: cover" %>
